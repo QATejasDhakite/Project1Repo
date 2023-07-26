@@ -1,0 +1,432 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>27/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 25 15:16:33 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>198 seconds (198024 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.remove2ProductTest()'><b>remove2ProductTest</b><br>Test class: TestCases._2_InventoryPageTest</td>
+<td><div><pre>org.testng.internal.thread.ThreadTimeoutException: Method TestCases._2_InventoryPageTest.remove2ProductTest() didn&apos;t finish within the time-out 1000
+	at java.base@17.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.5/java.util.concurrent.CompletableFuture$Signaller.block(CompletableFuture.java:1866)
+	at java.base@17.0.5/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+	at java.base@17.0.5/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+	at java.base@17.0.5/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1939)
+	at java.base@17.0.5/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at app//org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at app//org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	at app//org.openqa.selenium.remote.http.netty.NettyHttpHandler$$Lambda$311/0x00000001003ab720.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent$$Lambda$463/0x00000001003e9090.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at app//org.openqa.selenium.remote.http.Filter$$Lambda$312/0x00000001003ab950.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent$$Lambda$463/0x00000001003e9090.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at app//org.openqa.selenium.remote.http.Filter$$Lambda$312/0x00000001003ab950.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at app/jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at app//Pages._2_InventoryPage.add6Product(_2_InventoryPage.java:84)
+	at app//Pages._2_InventoryPage.remove2Product(_2_InventoryPage.java:91)
+	at app//TestCases._2_InventoryPageTest.remove2ProductTest(_2_InventoryPageTest.java:97)
+	at java.base@17.0.5/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1114738367", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1114738367'><pre>org.testng.internal.thread.ThreadTimeoutException: Method TestCases._2_InventoryPageTest.remove2ProductTest() didn&apos;t finish within the time-out 1000
+	at java.base@17.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.5/java.util.concurrent.CompletableFuture$Signaller.block(CompletableFuture.java:1866)
+	at java.base@17.0.5/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+	at java.base@17.0.5/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+	at java.base@17.0.5/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1939)
+	at java.base@17.0.5/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at app//org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at app//org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	at app//org.openqa.selenium.remote.http.netty.NettyHttpHandler$$Lambda$311/0x00000001003ab720.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent$$Lambda$463/0x00000001003e9090.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at app//org.openqa.selenium.remote.http.Filter$$Lambda$312/0x00000001003ab950.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent$$Lambda$463/0x00000001003e9090.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at app//org.openqa.selenium.remote.http.Filter$$Lambda$312/0x00000001003ab950.execute(Unknown Source)
+	at app//org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.5/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at app/jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at app//Pages._2_InventoryPage.add6Product(_2_InventoryPage.java:84)
+	at app//Pages._2_InventoryPage.remove2Product(_2_InventoryPage.java:91)
+	at app//TestCases._2_InventoryPageTest.remove2ProductTest(_2_InventoryPageTest.java:97)
+	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.5/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at app//org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)
+	at app//org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)
+	at app//org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)
+	at java.base@17.0.5/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>1</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases._5_ChechoutPage2Test.verifypaymentInfoLabel()'><b>verifypaymentInfoLabel</b><br>Test class: TestCases._5_ChechoutPage2Test</td>
+<td></td>
+<td>0</td>
+<td>TestCases._5_ChechoutPage2Test@658c5a19</td></tr>
+<tr>
+<td title='TestCases._6_CheckoutCompletePageTest.verifyCompletePageURLTest()'><b>verifyCompletePageURLTest</b><br>Test class: TestCases._6_CheckoutCompletePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestCases._6_CheckoutCompletePageTest@420a85c4</td></tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.add6ProductTest()'><b>add6ProductTest</b><br>Test class: TestCases._2_InventoryPageTest<br/>
+<a href="#Output-1363130483" onClick='toggleBox("Output-1363130483", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1363130483" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1363130483">
+Total Product Added :- 6<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+<tr>
+<td title='TestCases._6_CheckoutCompletePageTest.verifylogo()'><b>verifylogo</b><br>Test class: TestCases._6_CheckoutCompletePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestCases._6_CheckoutCompletePageTest@420a85c4</td></tr>
+<tr>
+<td title='TestCases._4_CheckoutPage1Test.verifyCheckoutPage1URLTest()'><b>verifyCheckoutPage1URLTest</b><br>Test class: TestCases._4_CheckoutPage1Test<br/>
+<a href="#Output-931940545" onClick='toggleBox("Output-931940545", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-931940545" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-931940545">
+URL of checkout page 1 :-https://www.saucedemo.com/v1/checkout-step-one.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._4_CheckoutPage1Test@6c61a903</td></tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.verifyFooterLabelTest()'><b>verifyFooterLabelTest</b><br>Test class: TestCases._2_InventoryPageTest<br/>
+<a href="#Output-24919603" onClick='toggleBox("Output-24919603", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-24919603" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-24919603">
+Footer Label Title :- © 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+<tr>
+<td title='TestCases._1_LoginPageTest.verifyURLofAppTest()'><b>verifyURLofAppTest</b><br>Test class: TestCases._1_LoginPageTest<br/>
+<a href="#Output-1372802818" onClick='toggleBox("Output-1372802818", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1372802818" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1372802818">
+Orignal URL of application :-https://www.saucedemo.com/v1/<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._1_LoginPageTest@59d4cd39</td></tr>
+<tr>
+<td title='TestCases._1_LoginPageTest.loginToApplicationTest()'><b>loginToApplicationTest</b><br>Test class: TestCases._1_LoginPageTest<br/>
+<a href="#Output-1340389558" onClick='toggleBox("Output-1340389558", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1340389558" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1340389558">
+Current URL of application :-https://www.saucedemo.com/v1/inventory.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._1_LoginPageTest@59d4cd39</td></tr>
+<tr>
+<td title='TestCases._3_cartPageTest.verifyCartPageURLTest()'><b>verifyCartPageURLTest</b><br>Test class: TestCases._3_cartPageTest<br/>
+<a href="#Output-59725469" onClick='toggleBox("Output-59725469", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-59725469" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-59725469">
+URL of Cart page :-https://www.saucedemo.com/v1/cart.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._3_cartPageTest@421e361</td></tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.verifyFacebookLogoTest()'><b>verifyFacebookLogoTest</b><br>Test class: TestCases._2_InventoryPageTest<br/>
+<a href="#Output-637223849" onClick='toggleBox("Output-637223849", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-637223849" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-637223849">
+Visibility of Facebook Logo :- true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.verifyTwitterLogoTest()'><b>verifyTwitterLogoTest</b><br>Test class: TestCases._2_InventoryPageTest<br/>
+<a href="#Output-1210315704" onClick='toggleBox("Output-1210315704", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1210315704" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1210315704">
+Visibility of twitter Logo :- true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+<tr>
+<td title='TestCases._4_CheckoutPage1Test.verifyCheckoutPage1LabelTest()'><b>verifyCheckoutPage1LabelTest</b><br>Test class: TestCases._4_CheckoutPage1Test<br/>
+<a href="#Output-345584390" onClick='toggleBox("Output-345584390", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-345584390" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-345584390">
+Label of checkout page Label :-Checkout: Your Information<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._4_CheckoutPage1Test@6c61a903</td></tr>
+<tr>
+<td title='TestCases._5_ChechoutPage2Test.verifyshippingInfoLabel()'><b>verifyshippingInfoLabel</b><br>Test class: TestCases._5_ChechoutPage2Test</td>
+<td></td>
+<td>0</td>
+<td>TestCases._5_ChechoutPage2Test@658c5a19</td></tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.verifyLabelTest()'><b>verifyLabelTest</b><br>Test class: TestCases._2_InventoryPageTest<br/>
+<a href="#Output-1012785532" onClick='toggleBox("Output-1012785532", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1012785532" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1012785532">
+Label Title :- Products<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+<tr>
+<td title='TestCases._5_ChechoutPage2Test.verifytotalAmountLabel()'><b>verifytotalAmountLabel</b><br>Test class: TestCases._5_ChechoutPage2Test</td>
+<td></td>
+<td>0</td>
+<td>TestCases._5_ChechoutPage2Test@658c5a19</td></tr>
+<tr>
+<td title='TestCases._1_LoginPageTest.verifyTitleTest()'><b>verifyTitleTest</b><br>Test class: TestCases._1_LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>TestCases._1_LoginPageTest@59d4cd39</td></tr>
+<tr>
+<td title='TestCases._4_CheckoutPage1Test.inputCheckoutInfoTest()'><b>inputCheckoutInfoTest</b><br>Test class: TestCases._4_CheckoutPage1Test<br/>
+<a href="#Output-1484177113" onClick='toggleBox("Output-1484177113", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1484177113" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1484177113">
+URL of checkout page 2 :-https://www.saucedemo.com/v1/checkout-step-two.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._4_CheckoutPage1Test@6c61a903</td></tr>
+<tr>
+<td title='TestCases._1_LoginPageTest.verifyBotLogoTest()'><b>verifyBotLogoTest</b><br>Test class: TestCases._1_LoginPageTest<br/>
+<a href="#Output-1553338212" onClick='toggleBox("Output-1553338212", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1553338212" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1553338212">
+visibility of Bot logo :-true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._1_LoginPageTest@59d4cd39</td></tr>
+<tr>
+<td title='TestCases._3_cartPageTest.verifyCartLabelTest()'><b>verifyCartLabelTest</b><br>Test class: TestCases._3_cartPageTest<br/>
+<a href="#Output-175425856" onClick='toggleBox("Output-175425856", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-175425856" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-175425856">
+Label of Cart page :-Your Cart<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._3_cartPageTest@421e361</td></tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.verifyProductLogoTest()'><b>verifyProductLogoTest</b><br>Test class: TestCases._2_InventoryPageTest<br/>
+<a href="#Output-1119268034" onClick='toggleBox("Output-1119268034", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1119268034" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1119268034">
+Visibility of Product Logo :- true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+<tr>
+<td title='TestCases._6_CheckoutCompletePageTest.verifyCheckoutCompleteLabel1Test()'><b>verifyCheckoutCompleteLabel1Test</b><br>Test class: TestCases._6_CheckoutCompletePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestCases._6_CheckoutCompletePageTest@420a85c4</td></tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.verifyFooterLogoTest()'><b>verifyFooterLogoTest</b><br>Test class: TestCases._2_InventoryPageTest<br/>
+<a href="#Output-687185923" onClick='toggleBox("Output-687185923", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-687185923" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-687185923">
+Visibility of footer Logo :- true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+<tr>
+<td title='TestCases._5_ChechoutPage2Test.verifyChekoutPage2Label()'><b>verifyChekoutPage2Label</b><br>Test class: TestCases._5_ChechoutPage2Test</td>
+<td></td>
+<td>0</td>
+<td>TestCases._5_ChechoutPage2Test@658c5a19</td></tr>
+<tr>
+<td title='TestCases._1_LoginPageTest.verifyLoginLogoTest()'><b>verifyLoginLogoTest</b><br>Test class: TestCases._1_LoginPageTest<br/>
+<a href="#Output-487981409" onClick='toggleBox("Output-487981409", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-487981409" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-487981409">
+visibility of login logo :-true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._1_LoginPageTest@59d4cd39</td></tr>
+<tr>
+<td title='TestCases._2_InventoryPageTest.verifyLinkedinLogoTest()'><b>verifyLinkedinLogoTest</b><br>Test class: TestCases._2_InventoryPageTest<br/>
+<a href="#Output-909778317" onClick='toggleBox("Output-909778317", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-909778317" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-909778317">
+Visibility of linkedin Logo :- true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases._2_InventoryPageTest@389c4eb1</td></tr>
+<tr>
+<td title='TestCases._6_CheckoutCompletePageTest.verifyCheckoutCompleteLabel2Test()'><b>verifyCheckoutCompleteLabel2Test</b><br>Test class: TestCases._6_CheckoutCompletePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestCases._6_CheckoutCompletePageTest@420a85c4</td></tr>
+<tr>
+<td title='TestCases._6_CheckoutCompletePageTest.verifyCheckoutCompleteLabel3Test()'><b>verifyCheckoutCompleteLabel3Test</b><br>Test class: TestCases._6_CheckoutCompletePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestCases._6_CheckoutCompletePageTest@420a85c4</td></tr>
+</table><p>
+</body>
+</html>
